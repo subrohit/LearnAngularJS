@@ -16,3 +16,10 @@ To give you guys a feel, this is how the home page will look like -
 
 Happy Coding!!!
 
+Changelog
+
+**11/19/2015**
+
+1. Added Sort functionality using Two Way binding directive.
+2. Integrated Github Continous Integration with Azurewebsites - http://proangularjslearn.azurewebsites.net/Views/products.html
+
