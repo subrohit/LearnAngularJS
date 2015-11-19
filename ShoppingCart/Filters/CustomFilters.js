@@ -43,4 +43,16 @@
             return 0;
         }
     }
+})
+.filter("sort", function ($filter) {
+    return function (data, sortOption) {
+        
+        if (angular.isArray(data) && angular.isObject(sortOption)) {
+            var options = sortOption["name"].split('-');
+            var xc = options[1] == 'Ascending' ? false : true;
+            return $filter("orderBy")(data, options[0], xc);
+        } else {
+            return [];
+        }
+    }
 });

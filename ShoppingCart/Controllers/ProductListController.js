@@ -10,7 +10,7 @@
         $scope.pageSize = productPageSize;
         $scope.viewAll = productViewAll;
         $scope.productsFilteredByCategoryCount = 0;
-        $scope.reverse = true;
+        $scope.selectedSortOption = { name: "price-Ascending", value: "Ascending" };
 
         $scope.selectCategory = function (category) {
             selectedCategory = category;

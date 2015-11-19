@@ -18,7 +18,7 @@
         restrict: "E",
         scope: {
             columns: "=sortcolumns",
-            option: "=selectedoption"
+            optionselected: "=selectedoption"
         },
         templateUrl: '../Views/Directives/SortAll.html',
         controller: function ($scope) {
@@ -27,9 +27,10 @@
             var desc = 'Descending';
             $scope.getSortOptions = function () {
                 angular.forEach($scope.columns, function (item) {
-                    $scope.sortOptions.push({ name: item + ' - ' + asc, value: asc });
-                    $scope.sortOptions.push({ name: item + ' - ' + desc, value: desc });
+                    $scope.sortOptions.push({ name: item + '-' + asc, value: asc });
+                    $scope.sortOptions.push({ name: item + '-' + desc, value: desc });
                 });
+                $scope.optionselected = $scope.sortOptions[1];
                 return $scope.sortOptions;
             }
         }
