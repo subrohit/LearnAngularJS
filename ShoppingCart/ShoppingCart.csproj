@@ -47,7 +47,7 @@
     <Content Include="Controllers\ProductListController.js" />
     <Content Include="Directives\Directives.js" />
     <Content Include="Filters\CustomFilters.js" />
-    <Content Include="Images\GitReadMe.PNG" />
+    <Content Include="Images\GitReadMe.png" />
     <Content Include="packages.config" />
     <Content Include="Styles\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="Styles\bootstrap\css\bootstrap.css.map" />
