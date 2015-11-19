@@ -8,5 +8,8 @@ I am going to extend the base solution with new functionalities and change exist
 
 Please feel free to send the Pull requests with specific comments, I will evaluate and accept the changes.
 
+To give you guys a feel, this is how the home page will look like - 
 
-learning AngularJS
+![alt tag](https://github.com/DreamingDevs/LearnAngularJS/tree/master/ShoppingCart/Images/GitReadMe.PNG)
+
+Happy Coding!!!
