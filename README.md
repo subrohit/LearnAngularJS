@@ -10,6 +10,7 @@ Please feel free to send the Pull requests with specific comments, I will evalua
 
 To give you guys a feel, this is how the home page will look like - 
 
-![alt tag](https://github.com/DreamingDevs/LearnAngularJS/tree/master/ShoppingCart/Images/GitReadMe.PNG)
+![Home](https://raw.github.com/DreamingDevs/LearnAngularJS/master/ShoppingCart/Images/GitReadMe.PNG "Home")
 
 Happy Coding!!!
+
