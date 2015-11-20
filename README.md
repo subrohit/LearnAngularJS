@@ -20,6 +20,14 @@ Changelog
 ---------------
 **11/19/2015**
 
-1. Added Sort functionality using Two Way binding directive.
+1. Added Sort functionality using Two Way binding directive
 2. Integrated Github Continous Integration with Azurewebsites - http://proangularjslearn.azurewebsites.net/Views/products.html
+
+**11/20/2015**
+
+1. Added One time binding for Product List
+2. Added Cart Factory
+3. Implemented Add to cart/Remove from cart functionality
+4. Added Cart Summary Directive
+5. Enabled CORS on AzureWebsite through Web.Config <httpProtocal>
 
