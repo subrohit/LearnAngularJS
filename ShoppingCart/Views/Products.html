@@ -7,11 +7,13 @@
     <link href="../Styles/bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
     <link href="../Styles/Main.css" rel="stylesheet" />
     <script src="../Controllers/App.js"></script>
+    <script src="../scripts/angular-route.min.js"></script>
     <script src="../Components/Cart.js"></script>
     <script src="../Filters/CustomFilters.js"></script>
+    <script src="../Directives/Directives.js"></script>
     <script src="../Controllers/MainController.js"></script>
     <script src="../Controllers/ProductListController.js"></script>
-    <script src="../Directives/Directives.js"></script>
+    <script src="../Controllers/CartSummaryController.js"></script>    
 </head>
 <body ng-controller="MainCtrl">
     <div class="navbar navbar-inverse">
@@ -23,61 +25,7 @@
         <a href="/Views/Products.html" class="alert-link">Click here to try again</a>
     </div>
 
-    <div class="panel-default" ng-controller="ProductListCtrl" ng-hide="data.error" ng-cloak>
+    <ng-view />
 
-        <!-- Categories -->
-        <div class="col-xs-3">
-            <a ng-click="selectCategory(null)" ng-class="selectedcategoryClass()" class="btn btn-block btn-default btn-lg">Home</a>
-            <a ng-repeat="category in data.products | orderBy:'category' | unique:'category'" ng-click="selectCategory(category)" ng-class="selectedcategoryClass(category)" class="btn btn-block btn-default btn-lg">
-                {{ ::category}}
-            </a>
-        </div>
-
-        <!--
-            2. Add Routing
-            4. Reduce number of filtering operations
-            5. Add Cart Operations
-            6. Add cart widget
-        -->
-
-
-        <div class="col-xs-8">
-                       
-            <div class="btn-group width-100percent padding-bottom-10px">
-                <!-- Sort -->
-                <sort-All sortcolumns="productColumns" selectedoption="selectedSortOption"></sort-All>
-                <!-- View All/View Few-->
-                <view-All isviewall="viewAll" ng-show="productsFilteredByCategoryCount > pageSize"></view-All>
-            </div>
-            
-
-            <!-- Products Grid -->
-            <div class="well padding-top-0px" ng-repeat="product in filteredProductsByCategory() | sort:selectedSortOption | range:selectedPage:pageSize:viewAll">
-                <h3>
-                    <strong>{{ ::product.name}}</strong>
-                    <span class="pull-right label label-primary">
-                        {{ ::product.price | currency}}
-                    </span>
-                </h3>
-                <button ng-click="addProductToCart(product)" class="btn btn-success pull-right" ng-show="!product.isAddedToCart">
-                    Add to cart
-                </button>
-                <button ng-click="removeFromCart(product)" class="btn btn-danger pull-right" ng-show="product.isAddedToCart">
-                    Remove from cart
-                </button>
-                    <span class="lead">{{ ::product.description}}</span>
-</div>
-
-            <!-- Pagination -->
-            <div class="pull-right btn-group" ng-show="productsFilteredByCategoryCount > pageSize">
-                <a ng-repeat="page in filteredProductsByCategory() | pageCount:pageSize:viewAll"
-                   ng-click="selectPage($index + 1)" class="btn btn-default"
-                   ng-class="getPageClass($index + 1)">
-                    {{ ::$index + 1}}
-                </a>
-            </div>
-        </div>
-
-    </div>
 </body>
 </html>

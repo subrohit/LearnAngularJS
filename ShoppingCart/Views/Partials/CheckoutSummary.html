@@ -1,0 +1,33 @@
+﻿<h2>Your cart</h2>
+<div ng-controller="cartSummaryController">
+
+   
+        <div class="alert alert-warning col-sm-6 col-md-offset-3" ng-show="cartData.length == 0">
+            There are no products in your shopping cart.
+            <a href="#/products" class="alert-link">Click here to return to the catalogue</a>
+        </div>
+    
+
+      
+            <div class="col-sm-6 col-md-offset-3" ng-hide="cartData.length == 0">
+                <!-- Products Grid -->
+                <div class="well padding-top-0px" ng-repeat="product in cartData">
+                    <h3>
+                        <strong>{{ ::product.name}}</strong>
+                        <span class="pull-right label label-primary">
+                            {{ ::product.price | currency}}
+                        </span>
+                    </h3>
+                    <button ng-click="remove(product)" class="btn btn-danger pull-right">
+                        Remove from cart
+                    </button>
+                    <span class="lead">{{ ::product.description}}</span>
+                </div>
+
+                <div class="text-center">
+                    <a class="btn btn-primary" href="#/products">Continue shopping</a>
+                    <a class="btn btn-primary" href="#/placeorder">Place order now</a>
+                </div>
+            </div>
+       
+    </div>

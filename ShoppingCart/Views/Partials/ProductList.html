@@ -1,0 +1,48 @@
+﻿<div class="panel-default" ng-controller="ProductListCtrl" ng-hide="data.error" ng-cloak>
+
+    <!-- Categories -->
+    <div class="col-xs-3">
+        <a ng-click="selectCategory(null)" ng-class="selectedcategoryClass()" class="btn btn-block btn-default btn-lg">Home</a>
+        <a ng-repeat="category in data.products | orderBy:'category' | unique:'category'" ng-click="selectCategory(category)" ng-class="selectedcategoryClass(category)" class="btn btn-block btn-default btn-lg">
+            {{ ::category}}
+        </a>
+    </div>
+
+    <div class="col-xs-8">
+
+        <div class="btn-group width-100percent padding-bottom-10px">
+            <!-- Sort -->
+            <sort-All sortcolumns="productColumns" selectedoption="selectedSortOption"></sort-All>
+            <!-- View All/View Few-->
+            <view-All isviewall="viewAll" ng-show="productsFilteredByCategoryCount > pageSize"></view-All>
+        </div>
+
+
+        <!-- Products Grid -->
+        <div class="well padding-top-0px" ng-repeat="product in filteredProductsByCategory() | sort:selectedSortOption | range:selectedPage:pageSize:viewAll">
+            <h3>
+                <strong>{{ ::product.name}}</strong>
+                <span class="pull-right label label-primary">
+                    {{ ::product.price | currency}}
+                </span>
+            </h3>
+            <button ng-click="addProductToCart(product)" class="btn btn-success pull-right" ng-show="!product.isAddedToCart">
+                Add to cart
+            </button>
+            <button ng-click="removeFromCart(product)" class="btn btn-danger pull-right" ng-show="product.isAddedToCart">
+                Remove from cart
+            </button>
+            <span class="lead">{{ ::product.description}}</span>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pull-right btn-group" ng-show="productsFilteredByCategoryCount > pageSize">
+            <a ng-repeat="page in filteredProductsByCategory() | pageCount:pageSize:viewAll"
+               ng-click="selectPage($index + 1)" class="btn btn-default"
+               ng-class="getPageClass($index + 1)">
+                {{ ::$index + 1}}
+            </a>
+        </div>
+    </div>
+
+</div>
