@@ -2,7 +2,7 @@
     .constant("productListActiveClass", "btn-primary")
     .constant("productPageSize", 3)
     .constant("productViewAll", false)
-    .controller("ProductListCtrl", function ($scope, $filter, productListActiveClass, productPageSize, productViewAll) {
+    .controller("ProductListCtrl", function ($scope, $filter, productListActiveClass, productPageSize, productViewAll, cart) {
 
         var selectedCategory = null;
 
@@ -28,6 +28,16 @@
                 $scope.productsFilteredByCategoryCount = filteredResults.length;
 
             return filteredResults;
+        }
+
+        $scope.addProductToCart = function (product) {
+            cart.addProduct(product.id, product.name, product.price);
+            product.isAddedToCart = true;
+        }
+
+        $scope.removeFromCart = function (product) {
+            cart.removeProduct(product.id);
+            product.isAddedToCart = false;
         }
 
         $scope.selectedcategoryClass = function (category) {

@@ -44,6 +44,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Components\Cart.js" />
     <Content Include="Controllers\ProductListController.js" />
     <Content Include="Directives\Directives.js" />
     <Content Include="Filters\CustomFilters.js" />
@@ -82,6 +83,7 @@
     <Content Include="Styles\bootstrap\js\bootstrap.min.js" />
     <Content Include="Styles\bootstrap\js\npm.js" />
     <Content Include="Styles\Main.css" />
+    <Content Include="Views\Directives\CartSummary.html" />
     <Content Include="Views\Directives\SortAll.html" />
     <Content Include="Views\Products.html" />
     <Content Include="Views\Directives\ViewAll.html" />
@@ -92,7 +94,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Components\" />
     <Folder Include="Libraries\" />
   </ItemGroup>
   <PropertyGroup>

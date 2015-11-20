@@ -30,8 +30,31 @@
                     $scope.sortOptions.push({ name: item + '-' + asc, value: asc });
                     $scope.sortOptions.push({ name: item + '-' + desc, value: desc });
                 });
-                $scope.optionselected = $scope.sortOptions[1];
+                $scope.optionselected = $scope.sortOptions[0];
                 return $scope.sortOptions;
+            }
+        }
+    };
+})
+.directive("cartSummary", function (cart) {
+    return {
+        restrict: "E",
+        templateUrl: "../Views/Directives/CartSummary.html",
+        controller: function ($scope) {
+            var cartData = cart.getProducts();
+            $scope.total = function () {
+                var total = 0;
+                for (var i = 0; i < cartData.length; i++) {
+                    total += (cartData[i].price * cartData[i].count);
+                }
+                return total;
+            }
+            $scope.itemCount = function () {
+                var total = 0;
+                for (var i = 0; i < cartData.length; i++) {
+                    total += cartData[i].count;
+                }
+                return total;
             }
         }
     };

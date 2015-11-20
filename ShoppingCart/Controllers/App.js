@@ -1,1 +1,1 @@
-﻿angular.module("productStore", ["customFilters", "customDirectives"]);
+﻿angular.module("productStore", ["customFilters", "customDirectives", "cart"]);
