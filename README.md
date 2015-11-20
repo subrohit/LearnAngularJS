@@ -31,3 +31,10 @@ Changelog
 4. Added Cart Summary Directive
 5. Enabled CORS on AzureWebsite through Web.Config <httpProtocal>
 
+**11/20/2015 Part-2**
+
+1. Added Checkout Summary
+2. Implemented ngRoute
+
+
+
