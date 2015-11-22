@@ -71,9 +71,7 @@
   <ItemGroup>
     <Content Include="Controllers\App.js" />
     <Content Include="Controllers\MainController.js" />
-    <Content Include="scripts\angular-mocks.js" />
     <None Include="scripts\angular.intellisense.js" />
-    <Content Include="scripts\angular.js" />
     <Content Include="scripts\angular.min.js" />
     <None Include="scripts\_references.js" />
     <Content Include="Styles\bootstrap\css\bootstrap-theme.css" />

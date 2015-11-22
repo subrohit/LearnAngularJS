@@ -7,7 +7,6 @@
 /// <reference path="../directives/directives.js" />
 /// <reference path="../filters/customfilters.js" />
 /// <reference path="angular.js" />
-/// <reference path="angular-mocks.js" />
 /// <reference path="angular-route.min.js" />
 /// <reference path="../styles/bootstrap/js/bootstrap.js" />
 /// <reference path="../styles/bootstrap/js/npm.js" />

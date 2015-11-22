@@ -21,8 +21,12 @@
             $scope.selectedPage = newPage;
         }
 
-        $scope.filteredProductsByCategory = function () {            
-            var filteredResults = $filter('filter')($scope.data.products, selectedCategory);            
+        $scope.filteredProductsByCategory = function () {
+            var filteredResults = [];
+            if (selectedCategory != null)
+                filteredResults = $filter('filter')($scope.data.products, selectedCategory);
+            else
+                filteredResults = $scope.data.products;            
 
             if(angular.isArray(filteredResults))
                 $scope.productsFilteredByCategoryCount = filteredResults.length;

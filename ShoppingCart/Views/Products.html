@@ -2,15 +2,18 @@
 <html ng-app="productStore">
 <head>
     <title>Product Store</title>
-    <script src="../scripts/angular.js"></script>
     <link href="../Styles/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="../Styles/bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
     <link href="../Styles/Main.css" rel="stylesheet" />
-    <script src="../Controllers/App.js"></script>
-    <script src="../scripts/angular-route.min.js"></script>
+ 
+    <script src="../scripts/angular.min.js"></script>   
+    <script src="../scripts/angular-route.min.js"></script> 
+
+    <script src="../Controllers/App.js"></script>    
     <script src="../Components/Cart.js"></script>
     <script src="../Filters/CustomFilters.js"></script>
     <script src="../Directives/Directives.js"></script>
+
     <script src="../Controllers/MainController.js"></script>
     <script src="../Controllers/ProductListController.js"></script>
     <script src="../Controllers/CartSummaryController.js"></script>    
@@ -25,7 +28,7 @@
         <a href="/Views/Products.html" class="alert-link">Click here to try again</a>
     </div>
 
-    <ng-view />
+        <div ng-view></div>
 
 </body>
 </html>
