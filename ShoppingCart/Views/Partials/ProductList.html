@@ -2,7 +2,7 @@
 
     <!-- Categories -->
     <div class="col-xs-3">
-        <a ng-click="selectCategory(null)" ng-class="selectedcategoryClass()" class="btn btn-block btn-default btn-lg">Home</a>
+        <a ng-click="selectCategory('')" ng-class="selectedcategoryClass('')" class="btn btn-block btn-default btn-lg">Home</a>
         <a ng-repeat="category in data.products | orderBy:'category' | unique:'category'" ng-click="selectCategory(category)" ng-class="selectedcategoryClass(category)" class="btn btn-block btn-default btn-lg">
             {{ ::category}}
         </a>

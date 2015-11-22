@@ -4,7 +4,7 @@
     .constant("productViewAll", false)
     .controller("ProductListCtrl", function ($scope, $filter, productListActiveClass, productPageSize, productViewAll, cart) {
 
-        var selectedCategory = null;
+        var selectedCategory = '';
 
         $scope.selectedPage = 1;
         $scope.pageSize = productPageSize;
@@ -22,11 +22,7 @@
         }
 
         $scope.filteredProductsByCategory = function () {
-            var filteredResults = [];
-            if (selectedCategory != null)
-                filteredResults = $filter('filter')($scope.data.products, selectedCategory);
-            else
-                filteredResults = $scope.data.products;            
+            var filteredResults =  $filter('filter')($scope.data.products, selectedCategory);         
 
             if(angular.isArray(filteredResults))
                 $scope.productsFilteredByCategoryCount = filteredResults.length;
