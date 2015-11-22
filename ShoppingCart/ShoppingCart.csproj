@@ -53,6 +53,7 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="scripts\angular-animate.min.js" />
     <Content Include="scripts\angular-route.min.js" />
     <Content Include="Styles\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="Styles\bootstrap\css\bootstrap.css.map" />

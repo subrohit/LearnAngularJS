@@ -5,18 +5,19 @@
     <link href="../Styles/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="../Styles/bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
     <link href="../Styles/Main.css" rel="stylesheet" />
- 
-    <script src="../scripts/angular.min.js"></script>   
-    <script src="../scripts/angular-route.min.js"></script> 
 
-    <script src="../Controllers/App.js"></script>    
+    <script src="../scripts/angular.min.js"></script>
+    <script src="../scripts/angular-animate.min.js"></script>
+    <script src="../scripts/angular-route.min.js"></script>
+
+    <script src="../Controllers/App.js"></script>
     <script src="../Components/Cart.js"></script>
     <script src="../Filters/CustomFilters.js"></script>
     <script src="../Directives/Directives.js"></script>
 
     <script src="../Controllers/MainController.js"></script>
     <script src="../Controllers/ProductListController.js"></script>
-    <script src="../Controllers/CartSummaryController.js"></script>    
+    <script src="../Controllers/CartSummaryController.js"></script>
 </head>
 <body ng-controller="MainCtrl">
     <div class="navbar navbar-inverse">
@@ -28,7 +29,7 @@
         <a href="/Views/Products.html" class="alert-link">Click here to try again</a>
     </div>
 
-        <div ng-view></div>
+    <div ng-view class="view-animate"></div>
 
 </body>
 </html>
