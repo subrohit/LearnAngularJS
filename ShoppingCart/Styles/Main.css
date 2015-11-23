@@ -1,4 +1,5 @@
-﻿.view-animate {
+﻿/* ngAnimate - Start */
+.view-animate {
     /*padding: 10px;*/
 }
 
@@ -26,6 +27,30 @@
     .view-animate.ng-leave.ng-leave-active {
         left: -100%;
     }
+
+/* ngAnimate - End */
+
+/* Validation styles - Start */
+ .ng-invalid.ng-touched {
+    background-color: #FA787E;
+  }
+
+.ng-valid.ng-touched {
+    background-color: #78FA89;
+  }
+/*.ng-invalid {
+    background-color: lightpink;
+}
+
+.ng-valid {
+    background-color: lightgreen;
+}
+
+span.error {
+    color: red;
+    font-weight: bold;
+}*/
+/* Validation styles - End*/
 
 
 .padding-top-0px {
