@@ -36,5 +36,9 @@ Changelog
 1. Added Checkout Summary
 2. Implemented ngRoute
 
+**11/22/2015**
+
+1. Upgraded to AngularJS v1.5.0-beta.2
+2. Implemented ngAnimate
 
 
