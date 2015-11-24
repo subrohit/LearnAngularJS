@@ -1,7 +1,7 @@
 ﻿angular.module("productStore")
-    .constant("dataUrl", "http://proangularjslearn.azurewebsites.net/testdata/Products.json")
-    .constant("orderUrl", "http://proangularjslearn.azurewebsites.net/testdata/Products.json")
-    .constant("productColumns", ["name","price","description"])
+    .constant("dataUrl", "http://proangularjslearnapi.azurewebsites.net/api/GetAllProducts")
+    .constant("orderUrl", "http://proangularjslearnapi.azurewebsites.net/testdata/Products.json")
+    .constant("productColumns", ["Name","Price","Description"])
     .controller("MainCtrl", function ($scope, $http, $location, dataUrl, productColumns) {
         $scope.data = {};
         $scope.productColumns = productColumns;

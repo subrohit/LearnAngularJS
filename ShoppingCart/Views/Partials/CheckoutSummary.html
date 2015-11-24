@@ -10,15 +10,15 @@
         <!-- Products Grid -->
         <div class="well padding-top-0px" ng-repeat="product in cartData">
             <h3>
-                <strong>{{ ::product.name}}</strong>
+                <strong>{{ ::product.Name}}</strong>
                 <span class="pull-right label label-primary">
-                    {{ ::product.price | currency}}
+                    {{ ::product.Price | currency}}
                 </span>
             </h3>
             <button ng-click="remove(product)" class="btn btn-danger pull-right">
                 Remove from cart
             </button>
-            <span class="lead">{{ ::product.description}}</span>
+            <span class="lead">{{ ::product.Description}}</span>
         </div>
 
         <!-- Navigation -->

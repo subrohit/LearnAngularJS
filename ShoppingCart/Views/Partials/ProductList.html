@@ -4,7 +4,7 @@
     <div class="col-xs-3">
         <a ng-click="selectCategory('')" ng-class="selectedcategoryClass('')" class="btn btn-block btn-default btn-lg">Home</a>
         <a ng-repeat="category in data.products | orderBy:'category' | unique:'category'" ng-click="selectCategory(category)" ng-class="selectedcategoryClass(category)" class="btn btn-block btn-default btn-lg">
-            {{ ::category}}
+            {{ ::Category}}
         </a>
     </div>
 
@@ -21,9 +21,9 @@
         <!-- Products Grid -->
         <div class="well padding-top-0px" ng-repeat="product in filteredProductsByCategory() | sort:selectedSortOption | range:selectedPage:pageSize:viewAll">
             <h3>
-                <strong>{{ ::product.name}}</strong>
+                <strong>{{ ::product.Name}}</strong>
                 <span class="pull-right label label-primary">
-                    {{ ::product.price | currency}}
+                    {{ ::product.Price | currency}}
                 </span>
             </h3>
             <button ng-click="addProductToCart(product)" class="btn btn-success pull-right" ng-show="!product.isAddedToCart">
@@ -32,7 +32,7 @@
             <button ng-click="removeFromCart(product)" class="btn btn-danger pull-right" ng-show="product.isAddedToCart">
                 Remove from cart
             </button>
-            <span class="lead">{{ ::product.description}}</span>
+            <span class="lead">{{ ::product.Description}}</span>
         </div>
 
         <!-- Pagination -->
