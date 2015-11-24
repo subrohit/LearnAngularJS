@@ -41,4 +41,10 @@ Changelog
 1. Upgraded to AngularJS v1.5.0-beta.2
 2. Implemented ngAnimate
 
+**11/23/2015**
+
+1. Added Shipping Details Form with Validation
+2. Implemented Order Processing and Thank you View
+3. Added separate WebApi project
+
 
