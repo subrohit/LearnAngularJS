@@ -15,10 +15,19 @@
         })
 
         $scope.sendOrder = function (shippingDetails) {            
-            var order = angular.copy(shippingDetails);
-            order.Products = cart.getProducts();
-            console.log(order);
-            $http.post(orderUrl, order)
+            var orderData = angular.copy(shippingDetails);
+            orderData.Products = cart.getProducts();
+            console.log(angular.toJson(orderData));
+            var req = {
+                method: 'POST',
+                url: orderUrl,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: angular.toJson(orderData)
+            }
+
+            $http(req)
             .success(function (data) {
                 $scope.data.orderId = data.id;
                 cart.getProducts().length = 0;
