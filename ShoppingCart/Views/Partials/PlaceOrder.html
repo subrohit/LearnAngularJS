@@ -12,7 +12,7 @@
                 <span ng-show="shippingForm.Name.$error.required">Please enter a name</span>
             </span>
         </div>
-        <h3>Address</h3>
+        <!--<h3>Address</h3>
         <div class="form-group">
             <label>Street Address</label>
             <input class="form-control" name="street" ng-model="data.shipping.Street" required/>
@@ -54,7 +54,7 @@
                 <input name="giftwrap" type="checkbox" ng-model="data.shipping.Giftwrap" />
                 Gift wrap these items
             </label>
-        </div>
+        </div>-->
         <div class="text-center">
             <button ng-disabled="shippingForm.$invalid" ng-click="sendOrder(data.shipping)" class="btn btn-primary">Complete order</button>
         </div>

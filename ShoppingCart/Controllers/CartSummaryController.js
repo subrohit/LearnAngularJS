@@ -4,12 +4,13 @@
     $scope.total = function () {
         var total = 0;
         for (var i = 0; i < $scope.cartData.length; i++) {
-            total += $scope.cartData[i].price;
+            total += $scope.cartData[i].Price;
         }
         return total;
     }
     $scope.remove = function (product) {
-        cart.removeProduct(product.id);
+        console.log(product);
+        cart.removeProduct(product.Id);
         product.isAddedToCart = false;
     }
 });

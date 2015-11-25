@@ -9,7 +9,7 @@ namespace ShoppingCart.WebApi.Controllers
 {
     public class ProductController : ApiController
     {
-        private static Dictionary<Guid, Order> _orders;
+        private static Dictionary<Guid, Order> _orders = new Dictionary<Guid, Order>();
         [Route("api/GetAllProducts")]
         public IEnumerable<Product> GetProducts()
         {
