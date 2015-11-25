@@ -9,6 +9,7 @@ namespace ShoppingCart.WebApi.Controllers
 {
     public class ProductController : ApiController
     {
+        private static Dictionary<Guid, Order> _orders;
         [Route("api/GetAllProducts")]
         public IEnumerable<Product> GetProducts()
         {
@@ -25,6 +26,20 @@ namespace ShoppingCart.WebApi.Controllers
                 new Product { Category = "Chess", Description = "Gold-plated, diamond-studded King", Name = "Bling-Bling King", Price = 1200, Id = "59166228d70f8858"}
             };
         }
+
+        [Route("api/PostProducts")]
+        public Guid PostProducts(Order order)
+        {
+            var orderId = Guid.NewGuid();
+            _orders.Add(orderId, order);
+            return orderId;
+        }
+
+        [Route("api/GetOrders")]
+        public Dictionary<Guid, Order> GetOrders()
+        {
+            return _orders;
+        }
     }
 
     public class Product
@@ -34,5 +49,16 @@ namespace ShoppingCart.WebApi.Controllers
         public string Description { get; set; }
         public decimal Price { get; set; }
         public string Id { get; set; }
+    }
+
+    public class Order
+    {
+        public List<Product> Products { get; set; }
+        public string Name { get; set; }
+        public string Street { get; set; }
+        public string Zip { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Country { get; set; }
     }
 }

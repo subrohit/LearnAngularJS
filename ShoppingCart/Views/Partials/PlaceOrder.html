@@ -7,51 +7,51 @@
         <h3>Ship to</h3>
         <div class="form-group">
             <label>Name</label>
-            <input class="form-control" name="name" ng-model="data.shipping.name" required/>
+            <input class="form-control" name="name" ng-model="data.shipping.Name" required/>
             <span class="error" ng-show="shippingForm.$submitted || shippingForm.name.$touched">
-                <span ng-show="shippingForm.name.$error.required">Please enter a name</span>
+                <span ng-show="shippingForm.Name.$error.required">Please enter a name</span>
             </span>
         </div>
         <h3>Address</h3>
         <div class="form-group">
             <label>Street Address</label>
-            <input class="form-control" name="street" ng-model="data.shipping.street" required/>
+            <input class="form-control" name="street" ng-model="data.shipping.Street" required/>
             <span class="error" ng-show="shippingForm.$submitted || shippingForm.street.$touched">
-                <span ng-show="shippingForm.street.$error.required">Please enter a street address</span>
+                <span ng-show="shippingForm.Street.$error.required">Please enter a street address</span>
             </span>
         </div>
         <div class="form-group">
             <label>City</label>
-            <input name="city" class="form-control" ng-model="data.shipping.city" required />
+            <input name="city" class="form-control" ng-model="data.shipping.City" required />
             <span class="error" ng-show="shippingForm.$submitted || shippingForm.city.$touched">
-                <span ng-show="shippingForm.city.$error.required">Please enter a city</span>
+                <span ng-show="shippingForm.City.$error.required">Please enter a city</span>
             </span>
         </div>
         <div class="form-group">
             <label>State</label>
-            <input name="state" class="form-control" ng-model="data.shipping.state" required />
+            <input name="state" class="form-control" ng-model="data.shipping.State" required />
             <span class="error" ng-show="shippingForm.$submitted || shippingForm.state.$touched">
-                <span ng-show="shippingForm.state.$error.required">Please enter a state</span>
+                <span ng-show="shippingForm.State.$error.required">Please enter a state</span>
             </span>
         </div>
         <div class="form-group">
             <label>Zip</label>
-            <input name="zip" class="form-control" ng-model="data.shipping.zip" required />
+            <input name="zip" class="form-control" ng-model="data.shipping.Zip" required />
             <span class="error" ng-show="shippingForm.$submitted || shippingForm.zip.$touched">
-                <span ng-show="shippingForm.zip.$error.required">Please enter a zip code</span>
+                <span ng-show="shippingForm.Zip.$error.required">Please enter a zip code</span>
             </span>
         </div>
         <div class="form-group">
             <label>Country</label>
-            <input name="country" class="form-control" ng-model="data.shipping.country" required />
+            <input name="country" class="form-control" ng-model="data.shipping.Country" required />
             <span class="error" ng-show="shippingForm.$submitted || shippingForm.country.$touched">
-                <span ng-show="shippingForm.country.$error.required">Please enter a country</span>
+                <span ng-show="shippingForm.Country.$error.required">Please enter a country</span>
             </span>
         </div>
         <h3>Options</h3>
         <div class="checkbox">
             <label>
-                <input name="giftwrap" type="checkbox" ng-model="data.shipping.giftwrap" />
+                <input name="giftwrap" type="checkbox" ng-model="data.shipping.Giftwrap" />
                 Gift wrap these items
             </label>
         </div>
