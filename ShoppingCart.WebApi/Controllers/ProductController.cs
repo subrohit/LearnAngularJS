@@ -28,7 +28,7 @@ namespace ShoppingCart.WebApi.Controllers
         }
 
         [Route("api/PostProducts")]
-        [AcceptVerbs("POST")]
+        [AcceptVerbs("OPTIONS","POST")]
         public Guid PostProducts(Order order)
         {
             var orderId = Guid.NewGuid();
