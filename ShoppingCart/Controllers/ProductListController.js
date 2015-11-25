@@ -4,8 +4,7 @@
     .constant("productViewAll", false)
     .controller("ProductListCtrl", function ($scope, $filter, productListActiveClass, productPageSize, productViewAll, cart) {
 
-        var selectedCategory = '';
-
+        $scope.selectedCategory = '';
         $scope.selectedPage = 1;
         $scope.pageSize = productPageSize;
         $scope.viewAll = productViewAll;
@@ -13,7 +12,7 @@
         $scope.selectedSortOption = { name: "price-Ascending", value: "Ascending" };
 
         $scope.selectCategory = function (category) {
-            selectedCategory = category;
+            $scope.selectedCategory = category;
             $scope.selectedPage = 1;
         }
 
@@ -22,7 +21,7 @@
         }
 
         $scope.filteredProductsByCategory = function () {
-            var filteredResults =  $filter('filter')($scope.data.products, selectedCategory);         
+            var filteredResults = $filter('filter')($scope.data.products, $scope.selectedCategory);
 
             if(angular.isArray(filteredResults))
                 $scope.productsFilteredByCategoryCount = filteredResults.length;
@@ -38,14 +37,6 @@
         $scope.removeFromCart = function (product) {
             cart.removeProduct(product.id);
             product.isAddedToCart = false;
-        }
-
-        $scope.selectedcategoryClass = function (category) {
-            return selectedCategory == category ? productListActiveClass : "";
-        }
-
-        $scope.getPageClass = function (page) {
-            return $scope.selectedPage == page ? productListActiveClass : "";
         }
 
     });

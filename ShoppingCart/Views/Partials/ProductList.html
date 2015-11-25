@@ -2,8 +2,8 @@
 
     <!-- Categories -->
     <div class="col-xs-3">
-        <a ng-click="selectCategory('')" ng-class="selectedcategoryClass('')" class="btn btn-block btn-default btn-lg">Home</a>
-        <a ng-repeat="category in data.products | orderBy:'Category' | unique:'Category'" ng-click="selectCategory(category)" ng-class="selectedcategoryClass(category)" class="btn btn-block btn-default btn-lg">
+        <a ng-click="selectCategory('')" ng-class="{'btn-primary': selectedCategory == ''}" class="btn btn-block btn-default btn-lg">Home</a>
+        <a ng-repeat="category in data.products | orderBy:'Category' | unique:'Category'" ng-click="selectCategory(category)" ng-class="{'btn-primary': selectedCategory == category}" class="btn btn-block btn-default btn-lg">
             {{ ::category}}
         </a>
     </div>
@@ -39,7 +39,7 @@
         <div class="pull-right btn-group" ng-show="productsFilteredByCategoryCount > pageSize">
             <a ng-repeat="page in filteredProductsByCategory() | pageCount:pageSize:viewAll"
                ng-click="selectPage($index + 1)" class="btn btn-default"
-               ng-class="getPageClass($index + 1)">
+               ng-class="{ 'btn-primary' : selectedPage == ($index + 1)}">
                 {{ ::$index + 1}}
             </a>
         </div>
