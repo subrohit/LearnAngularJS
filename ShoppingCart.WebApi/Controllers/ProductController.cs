@@ -7,9 +7,8 @@ using System.Web.Http;
 
 namespace ShoppingCart.WebApi.Controllers
 {
-    public class ProductController : ApiController
-    {
-        private static Dictionary<Guid, Order> _orders = new Dictionary<Guid, Order>();
+    public class ProductController : BaseApiController
+    {        
         [Route("api/GetAllProducts")]
         public IEnumerable<Product> GetProducts()
         {
