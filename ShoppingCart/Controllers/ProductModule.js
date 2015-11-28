@@ -1,4 +1,5 @@
-﻿angular.module("productStore", ["customFilters", "customDirectives", "cart", "ngAnimate" ,"ngRoute"])
+﻿/* Product Module*/
+angular.module("productStore", ["customFilters", "customDirectives", "cart", "ngAnimate", "ngRoute"])
 .config(function ($routeProvider) {
     $routeProvider.when("/checkout", {
         templateUrl: "../Views/Partials/CheckoutSummary.html",
