@@ -45,6 +45,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Components\Cart.js" />
+    <Content Include="Controllers\AdminController.js" />
+    <Content Include="Controllers\AdminModule.js" />
     <Content Include="Controllers\CartSummaryController.js" />
     <Content Include="Controllers\ProductListController.js" />
     <Content Include="Directives\Directives.js" />
@@ -70,7 +72,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Controllers\App.js" />
+    <Content Include="Controllers\ProductModule.js" />
     <Content Include="Controllers\MainController.js" />
     <None Include="scripts\angular.intellisense.js" />
     <Content Include="scripts\angular.min.js" />
@@ -84,8 +86,11 @@
     <Content Include="Styles\bootstrap\js\bootstrap.min.js" />
     <Content Include="Styles\bootstrap\js\npm.js" />
     <Content Include="Styles\Main.css" />
+    <Content Include="Views\Admin.html" />
     <Content Include="Views\Directives\CartSummary.html" />
     <Content Include="Views\Directives\SortAll.html" />
+    <Content Include="Views\Partials\AdminOrders.html" />
+    <Content Include="Views\Partials\AdminProducts.html" />
     <Content Include="Views\Partials\CheckoutSummary.html" />
     <Content Include="Views\Partials\PlaceOrder.html" />
     <Content Include="Views\Partials\ProductList.html" />

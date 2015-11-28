@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html ng-app="AdminModule">
+<head>
+    <title>Product Store</title>
+    <!-- Styles -->
+    <link href="../Styles/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../Styles/bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../Styles/Main.css" rel="stylesheet" />
+
+    <!-- Libraries-->
+    <script src="../scripts/angular.min.js"></script>
+    <script src="../scripts/angular-animate.min.js"></script>
+    <script src="../scripts/angular-route.min.js"></script>
+
+    <!-- Modules, Filters, Directives -->
+    <script src="../Controllers/AdminModule.js"></script>
+
+    <!-- Controllers -->
+    <script src="../Controllers/AdminController.js"></script>
+</head>
+<body ng-controller="AdminController">
+    <div class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#">ADMIN DASHBOARD</a>
+    </div>
+
+    <!-- Menu -->
+    <div class="col-xs-3" ng-cloak>
+        <a ng-repeat="menuItem in getMenuItems()" ng-click="setSelectedMenuItem($index)" ng-class="{'btn-primary': selectedMenuItem == $index}" class="btn btn-block btn-default btn-lg">
+            {{ ::menuItem}}
+        </a>
+    </div>
+
+    <div class="col-xs-8" ng-cloak>
+        <div ng-include="getScreen()" class="view-animate"></div>
+        </div>
+
+</body>
+</html>
