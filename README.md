@@ -47,4 +47,5 @@ Changelog
 2. Implemented Order Processing and Thank you View
 3. Added separate WebApi project
 
+AngularBranchCommit
 
